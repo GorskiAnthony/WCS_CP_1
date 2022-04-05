@@ -17,10 +17,25 @@ exemple :
 ] 
 */
 
-function theaterSieges() {
-  // Your code here !
-}
+// ❌ INTERDIT
+// const sieges = [];
 
-console.log(theaterSieges());
+function theaterSieges() {
+	// Your code here !
+	// ✅ On déclare nos variable à l'interieur de notre fonction
+	const sieges = [];
+	// Je boucle une 1ere fois pour créer le nombre de rangee
+	for (let i = 1; i <= 26; i++) {
+		const rangee = [];
+		// Je boucle une 2eme fois pour ajouter les sièges dans ma rangée
+		for (let j = 1; j <= 100; j++) {
+			rangee.push(i + "-" + j);
+		}
+		// Je push ma rangée dans le tableau final qui se nomme sieges.
+		sieges.push(rangee);
+	}
+	// je return mon tableau remplit
+	return sieges;
+}
 
 module.exports = theaterSieges;
